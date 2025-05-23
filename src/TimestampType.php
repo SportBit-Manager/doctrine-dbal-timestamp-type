@@ -16,14 +16,14 @@ class TimestampType extends Type
     /**
      * Gets the SQL declaration snippet for a field of this type.
      *
-     * @param array                                     $fieldDeclaration The field declaration.
-     * @param \Doctrine\DBAL\Platforms\AbstractPlatform $platform         The currently used database platform.
+     * @param array                                     $column   The field declaration.
+     * @param \Doctrine\DBAL\Platforms\AbstractPlatform $platform The currently used database platform.
      *
      * @throws \Doctrine\DBAL\DBALException
      *
      * @return string
      */
-    public function getSQLDeclaration(array $fieldDeclaration, AbstractPlatform $platform)
+    public function getSQLDeclaration(array $column, AbstractPlatform $platform): string
     {
         $name = $platform->getName();
 
